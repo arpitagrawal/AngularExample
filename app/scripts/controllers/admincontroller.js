@@ -12,7 +12,7 @@ angular.module('capsStoreApp')
 
     $scope.productsList = [];
 
-    $scope.itemsPerPage = 2;
+    $scope.itemsPerPage = 4;
 	$scope.currentPage = 0;
 
 	$scope.range = function() {
@@ -63,16 +63,19 @@ angular.module('capsStoreApp')
     	Storeservices.getAllProductsDetails()
 		.success(function(data,status,headers,config){
 			if(data){
-				$scope.productsList = data;				
+				$scope.productsList = data;
 			}
 		})
 		.error(function(data,status,headers,config){
-
+			console.log(data);
 		});
     };
 
-    $scope.test = function(id){
-    	console.log(id);
+    $scope.updateData = function(id,value,category){
+    	var obj = {};
+    	obj[category] = value;
+    	console.log('PUT /admin/product/' + id);
+    	console.log('{' + category + ' : ' + obj[category] + '}');
     }
 	
 	var init = function(){

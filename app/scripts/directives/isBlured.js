@@ -13,18 +13,25 @@ angular.module('capsStoreApp')
 		link: function (scope, element, attrs) {
 			var oldValue;
         	scope.$watch(attrs.ngModel, function (v,x) {
-                //console.log('value changed, new value is: ' + v);
-                //console.log('value change: ' + v + 'old-value: ' + x);
-                oldValue =x;
+                oldValue = x;
             });
-	        // on blur, update the value in scope
             element.bind('blur', function (blurEvent) {
-            	console.log(oldValue);
-            	console.log(element.val());
+            	element.attr("readonly", "readonly");
                 if (oldValue != element.val()) {
-                    console.log('value changed, new value is: ' + element.val());
                     scope.$apply(attrs.isBlured);
                 }
+            });
+        }
+    }
+  });
+
+  angular.module('capsStoreApp')
+  .directive('inputEnabled', function () {
+    return {
+	    restrict: 'A',
+		link: function (scope, element, attrs) {
+            element.bind('click', function (clickEvent) {
+                element.removeAttr("readonly");
             });
         }
     }
