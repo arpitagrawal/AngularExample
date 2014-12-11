@@ -1,49 +1,59 @@
 [{
+	"id" : 1,
 	"name" : "Puma Long Hat",
 	"price" : 2.50,
 	"quantity" : 12
 },
 {
+	"id" : 2,
 	"name" : "Nike Round Hat",
 	"price" : 2.00,
 	"quantity" : 12 
 },
 {
+	"id" : 3,
 	"name" : "Adidas baseball cap",
 	"price" : 3.50,
 	"quantity" : 2 
 },
 {
+	"id" : 4,
 	"name" : "ESPN cricket cap",
 	"price" : 6.00,
 	"quantity" : 35
 },
 {
+	"id" : 5,
 	"name" : "Nike woman cap",
 	"price" : 2.10,
 	"quantity" : 22
 },
 {
+	"id" : 6,
 	"name" : "Rockstar cap",
 	"price" : 1.30,
 	"quantity" : 11
 },
 {
+	"id" : 7,
 	"name" : "Montecarlo Winter cap",
 	"price" : 9.00,
 	"quantity" : 98
 },
 {
+	"id" : 8,
 	"name" : "Armani cool cap",
 	"price" : 65.00,
 	"quantity" : 47
 },
 {
+	"id" : 9,
 	"name" : "PE cap",
 	"price" : 5.50,
 	"quantity" : 44
 },
 {
+	"id" : 10,
 	"name" : "LP sports cap",
 	"price" : 6.55,
 	"quantity" : 14

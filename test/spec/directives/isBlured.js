@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Directive: commonDirective', function () {
+describe('Directive: isBlured', function () {
 
   // load the directive's module
   beforeEach(module('capsStoreApp'));
@@ -13,8 +13,8 @@ describe('Directive: commonDirective', function () {
   }));
 
   it('should make hidden element visible', inject(function ($compile) {
-    element = angular.element('<common-directive></common-directive>');
+    element = angular.element('<is-blured></is-blured>');
     element = $compile(element)(scope);
-    expect(element.text()).toBe('this is the commonDirective directive');
+    expect(element.text()).toBe('this is the isBlured directive');
   }));
 });
