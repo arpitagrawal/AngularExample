@@ -16,13 +16,13 @@ angular.module('capsStoreApp')
 	$scope.currentPage = 0;
 
 	$scope.range = function() {
-	    var rangeSize = 5;
+	    var rangeSize = $scope.pageCount()+1;
 	    var ret = [];
 	    var start;
 
 	    start = $scope.currentPage;
 	    if ( start > $scope.pageCount()-rangeSize ) {
-	      start = $scope.pageCount()-rangeSize+1;
+	      start = $scope.pageCount()-rangeSize+1 < 0 ? 0 : $scope.pageCount()-rangeSize+1;
 	    }
 
 	    for (var i=start; i<start+rangeSize; i++) {
